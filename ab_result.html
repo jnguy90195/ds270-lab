@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A/B Test Result</title><style>
+:root{--surface:#fcfcfb;--text:#0b0b0b;--text2:#52514e;--grid:#e4e3df;--series:#2a78d6;--on-series:#ffffff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--surface:#1a1a19;--text:#fff;--text2:#c3c2b7;--grid:#3a3936;--series:#3987e5}}
+:root[data-theme="dark"]{--surface:#1a1a19;--text:#fff;--text2:#c3c2b7;--grid:#3a3936;--series:#3987e5}
+body{margin:0;background:var(--surface);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:600px;margin:0 auto;padding:24px 16px}
+h1{font-size:20px;margin:0 0 4px} p{color:var(--text2);margin:0 0 16px}
+svg{width:100%;height:auto;display:block}
+.grid{stroke:var(--grid);stroke-width:1} .axis{fill:var(--text2);font-size:12px} .lab{font-size:13px;fill:var(--text)}
+.fill{fill:var(--series)} .bar:hover .fill{opacity:.85}
+.val{fill:var(--text);font-size:16px;font-weight:600} .inbar{fill:var(--on-series);font-size:13px;font-weight:500}
+table{border-collapse:collapse;width:100%;margin-top:16px;font-size:14px} th,td{padding:6px 8px;border-bottom:1px solid var(--grid);text-align:right} th:first-child,td:first-child{text-align:left}
+th{color:var(--text2);font-weight:500} small{color:var(--text2)}
+</style></head><body><main>
+<h1>Conversion rate by test group</h1>
+<p>The new page (B) converts 2.80 points higher than the current page (A): 9.87% vs 7.07%, a 39.60% increase.</p>
+<svg viewBox="0 0 520 340" role="img" aria-label="Bar chart: A 7.07% of 3976 visitors, B 9.87% of 4024 visitors">
+<line x1="60" x2="500" y1="290.0" y2="290.0" class="grid"/><text x="52" y="294.0" class="axis" text-anchor="end">0%</text><line x1="60" x2="500" y1="227.5" y2="227.5" class="grid"/><text x="52" y="231.5" class="axis" text-anchor="end">3%</text><line x1="60" x2="500" y1="165.0" y2="165.0" class="grid"/><text x="52" y="169.0" class="axis" text-anchor="end">6%</text><line x1="60" x2="500" y1="102.5" y2="102.5" class="grid"/><text x="52" y="106.5" class="axis" text-anchor="end">9%</text><line x1="60" x2="500" y1="40.0" y2="40.0" class="grid"/><text x="52" y="44.0" class="axis" text-anchor="end">12%</text><g class="bar"><title>A · current page: 7.07% conversion (281 purchases / 3,976 visitors)</title>
+<path d="M130,290 V146.7624077800134 Q130,142.7624077800134 134,142.7624077800134 H266 Q270,142.7624077800134 270,146.7624077800134 V290 Z" class="fill"/>
+<text x="200.0" y="132.8" class="val" text-anchor="middle">7.07%</text>
+<text x="200.0" y="168.8" class="inbar" text-anchor="middle">3,976 visitors</text>
+<text x="200.0" y="312" class="axis lab" text-anchor="middle">A · current page</text></g><g class="bar"><title>B · new page: 9.87% conversion (397 purchases / 4,024 visitors)</title>
+<path d="M330,290 V88.46239231278992 Q330,84.46239231278992 334,84.46239231278992 H466 Q470,84.46239231278992 470,88.46239231278992 V290 Z" class="fill"/>
+<text x="400.0" y="74.5" class="val" text-anchor="middle">9.87%</text>
+<text x="400.0" y="110.5" class="inbar" text-anchor="middle">4,024 visitors</text>
+<text x="400.0" y="312" class="axis lab" text-anchor="middle">B · new page</text></g><line x1="60" x2="500" y1="290" y2="290" stroke="var(--text2)"/></svg>
+<table><thead><tr><th>Group</th><th>Visitors</th><th>Purchases</th><th>Conversion rate</th></tr></thead><tbody>
+<tr><td>A · current page</td><td>3,976</td><td>281</td><td>7.07%</td></tr>
+<tr><td>B · new page</td><td>4,024</td><td>397</td><td>9.87%</td></tr></tbody></table>
+<p style="margin-top:12px"><small>Source: ab_test_clean.csv (8,000 unique visitors, 2–29 March 2026). Conversion = completed purchase.</small></p>
+</main></body></html>
