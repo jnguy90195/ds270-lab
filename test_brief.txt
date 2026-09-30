@@ -1,0 +1,2 @@
+Pages tested: the current landing page (control_hero_v1, version A) against the new landing page with a redesigned hero banner (new_hero_v2, version B).
+Conversion: a visitor counts as converted when they complete a purchase (Completed_Purchase = Yes); adding to cart alone does not count.
